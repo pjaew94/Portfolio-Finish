@@ -28,7 +28,7 @@ const Projects: FC = () => {
     return (
         <div className='section-container'>
             <div className="section-content projects-section-content">
-                <div className="projects-text"><h1>PROJECTS NONONONONOON</h1></div>
+                <div className="projects-text"><h1>PROJECTS</h1></div>
                 <div className="projects-display-container">
                     <div className="project-content"></div>
                     <div className="project-list">
