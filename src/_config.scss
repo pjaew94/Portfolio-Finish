@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@700;800;900&display=swap');// Colors
+$black: #242120;
+$white: #fff;
+$beige: #ece7e2;
+$gray: #999694;
+
+
+//  Font Sizes
+$fsH1: 3rem;
+
+$fsH2: 1.4rem;
+$fsH2-mobile: 1rem;
+$fsH2-tablet: 1.2rem;
+$fsH2-tabletL: 1.3rem;
+$fsH2-laptopL: 1.2rem;
+$fsH2-desktopL: 2.3rem;
+$fsH2-desktopXL: 3.3rem;
+
+// Media Queries
+$mobileS-min: 320px;
+$mobileS-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 1024px;
+$tabletL-min: 1025px;
+$tabletL-max: 1439px;
+$laptopL-min: 1440px;
+$laptopL-max: 1919px;
+$desktop-min: 1920px;
+$desktop-max: 2559px;
+$desktopL-min: 2560px;
+$desktopL-max: 2999px;
+$desktopXL-min: 3000px;
+
+
+
+// Flex Mixin
+@mixin flex($align, $justify, $direction) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+// Primary Font Mixin
+@mixin primary-font($size, $weight) {
+    font-family: 'Playfair Display', serif;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+// Secondary Font Mixin
+@mixin secondary-font($size, $weight) {
+    font-family: 'Poppins', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+}

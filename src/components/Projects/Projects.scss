@@ -1,0 +1,82 @@
+@import "../../config";
+
+.projects-text {
+    @include flex(flex-end, flex-end, row);
+    width: 100%;
+    margin-bottom: 50px;
+    h1 {
+        margin-right: 30%;
+    }
+}
+
+.projects-display-container {
+    @include flex(flex-start, space-between, row);
+    width: 100%;
+    height: 700px;
+    
+
+    .project-content {
+        width: 80%;
+        height: 100%;
+    }
+
+    .project-list {
+        border-left: 2px solid $black;
+        height: 100%;
+        width: auto;
+        white-space: nowrap;
+
+        .item-container {
+            margin-bottom: 75px;
+            width: 50%;
+            cursor: pointer;
+            padding-left: 30px;
+            width: auto;
+       
+            h2 {
+                transition: 0.3s all ease-in-out;
+            }
+
+            &:hover {
+                h2 {
+                    color: $gray;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: $laptopL-min) and (max-width: $laptopL-max) {
+    .section-container {
+        .projects-section-content {
+            .projects-text {
+                h1 {
+                    margin-right: 25%;
+                }
+            }
+            .projects-display-container {
+                .project-content {
+                    background: black;
+
+                }
+                .project-list {
+                    width: auto;
+                    white-space: nowrap;
+                    .item-container {
+                        padding: 10px;
+                        width: auto;
+                    }
+
+                    .current-item-container {
+                        background: $black;
+                        transition: 0.7s all ease-in-out;
+                        h2 {
+                            color: $beige;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

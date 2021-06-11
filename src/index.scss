@@ -1,0 +1,174 @@
+@import './config';
+
+@font-face {
+    font-family: 'SequelBold';
+    src: url('./fonts/SequelBold.ttf') format('truetype');
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: 'BoringSansBold';
+    src: url('./fonts/SequelBold.ttf') format('truetype');
+    font-weight: bold;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: transparent;
+    ::-webkit-scrollbar {
+        width: 0 !important;
+    }
+}
+input[type="search"] {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+    border: none;
+}
+*:focus {
+    outline: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a {
+    border: none;
+    text-decoration: none;
+}
+
+.section-container {
+    @include flex(center, center, column);
+    width: 100vw;
+    background: $beige;
+    padding: 50px 0;
+
+    .section-content {
+        @include flex(center, center, column);
+        width: 1400px;
+    }
+}
+
+h1 {
+    font-size: $fsH1;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 900;
+    line-height: 2.5rem;
+    color: $black;
+}
+
+h2 {
+    font-size: $fsH2;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 800;
+    line-height: 1.6rem;
+    color: $black;
+}
+
+
+
+@media only screen and (min-width: $mobileS-min) and (max-width: $mobileS-max) {
+    .section-container {
+        padding: 40px 0;
+        .section-content {
+            width: 100%;
+            padding: 0 15px;
+        }
+    }
+    h2 {
+        font-size: $fsH2-mobile;
+        line-height: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    .section-container {
+        padding: 40px 0;
+        .section-content {
+            width: 720px;
+        }
+    }
+
+    h2 {
+        font-size: $fsH2-tablet;
+        line-height: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: $tabletL-min) and (max-width: $tabletL-max) {
+    .section-container {
+        padding: 40px 0;
+        .section-content {
+            width: 950px;
+        }
+    }
+
+    h2 {
+        font-size: $fsH2-tabletL;
+        line-height: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: $laptopL-min) and (max-width: $laptopL-max) {
+    .section-container{
+        padding: 40px 0;
+        .section-content {
+            width: 1200px;
+        }
+    }
+    h2 {
+        font-size: $fsH2-laptopL;
+        line-height: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: $desktopL-min) and (max-width: $desktopL-max) {
+    .section-container {
+        padding: 40px 0;
+        .section-content {
+            width: 2000px;
+        }
+    }
+
+    h2 {
+        font-size: $fsH2-desktopL;
+        line-height: 2.9rem;
+    }
+}
+
+@media only screen and (min-width: $desktopXL-min) {
+    .section-container {
+        padding: 100px 0;
+        .section-content {
+            width: 2900px;
+        }
+    }
+
+    h2 {
+        font-size: $fsH2-desktopXL;
+        line-height: 3.9rem;
+    }
+}
